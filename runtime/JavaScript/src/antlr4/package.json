@@ -1,8 +1,15 @@
 {
-  "name": "antlr4",
+  "name": "antlr-builds",
   "version": "4.7.2",
-  "description": "JavaScript runtime for ANTLR4",
-  "main": "src/antlr4/index.js",
+  "description": "JavaScript runtime for ANTLR4, bundled version",
+  "main": "index.js",
+  "bin": {
+    "antlr": "bin/antlr.js"
+  },
+  "scripts": {
+    "build": "rm -rf ./dist && webpack",
+    "download-antlr": "curl http://www.antlr.org/download/antlr-4.7.2-complete.jar -o ./bin/antlr.jar"
+  },
   "repository": "antlr/antlr4.git",
   "keywords": [
     "lexer",
@@ -15,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/antlr/antlr4/issues"
   },
-  "homepage": "https://github.com/antlr/antlr4"
+  "homepage": "https://github.com/antlr/antlr4",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
 }

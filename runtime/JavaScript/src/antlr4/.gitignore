@@ -1,0 +1,4 @@
+!/bin
+/bin/antlr.jar
+/dist
+package-lock.json
